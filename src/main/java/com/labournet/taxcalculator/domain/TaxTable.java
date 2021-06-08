@@ -27,7 +27,7 @@ public class TaxTable {
     @NotNull
     private TaxThreshold taxThresholds;
     @NotNull
-    private TaxMedAidCredits taxMedAidCredits;
+    private MedicalAidTaxCredits medicalAidTaxCredits;
 
     public BigDecimal calculateAnnualIncomeTax(final int age, BigDecimal totalAnnualTaxableIncome) throws Exception {
         if (isIncomeLessThanTaxThresholds(totalAnnualTaxableIncome, age)) {
@@ -49,7 +49,7 @@ public class TaxTable {
     }
 
     public BigDecimal calculateAnnualTaxCredits(int medicalAidMembers) {
-        return taxMedAidCredits.calculateAnnualTaxCredits(medicalAidMembers);
+        return medicalAidTaxCredits.calculateAnnualTaxCredits(medicalAidMembers);
     }
 
     private boolean isIncomeLessThanTaxThresholds(final BigDecimal totalTaxableIncome, final int age) {

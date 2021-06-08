@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import javax.validation.constraints.Min;
 
 @Data
-public class TaxMedAidCredits {
+public class MedicalAidTaxCredits {
 
     @Min(1)
     private BigDecimal main;
